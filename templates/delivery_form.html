@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="{% url 'delivery_request' %}"method="post"enctype="multipart/form-data">
+	{% csrf_token %}
+     {{ deliveryform }}
+   <input type="submit"class="btn btn-default" value="Send Request">
+</form>
+</body>
+</html>

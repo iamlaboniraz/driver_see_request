@@ -1,0 +1,8 @@
+<h1>welcome</h1>
+{% if object.name %}
+<form action='/send/{{object.id}}/' method="get">{% csrf_token %}
+	<h1>ID : {{ object.id }}</h1>
+    <h2>Name :{{ object.name }}</h2>
+	<input type="submit" value="Send">
+</form>
+{% endif %}
